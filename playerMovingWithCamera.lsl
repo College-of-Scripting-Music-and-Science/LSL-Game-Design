@@ -1,5 +1,3 @@
-//All Rights Reserved Christopher Topalian Copyright 2020
-
 CameraLookingDown()
 {
     rotation sitRot = llEuler2Rot(<0, 0, 0> * DEG_TO_RAD);
@@ -12,6 +10,7 @@ integer on = TRUE;
 vector pos;
 float speed = 0.1;
 key person;
+key playerTexture = "84c36d64-89d8-c08a-5fbd-d4c59ae39674";
 
 default
 {
@@ -56,19 +55,19 @@ default
 
         if (button & CONTROL_FWD)      
         {
-            llSetLinkPrimitiveParamsFast(LINK_THIS,[PRIM_POSITION, llGetLocalPos() + <speed,0,0>,  PRIM_TEXTURE, 0, "84c36d64-89d8-c08a-5fbd-d4c59ae39674", <1,1,0>, <0,0,0>, 0 ]); 
+            llSetLinkPrimitiveParamsFast(LINK_THIS,[PRIM_POSITION, llGetLocalPos() + <speed,0,0>,  PRIM_TEXTURE, 0, playerTexture, <1,1,0>, <0,0,0>, 0 ]); 
         }                      
         if (button & CONTROL_BACK)      
         {
-            llSetLinkPrimitiveParamsFast(LINK_THIS,[PRIM_POSITION, llGetLocalPos() + <-speed,0,0>, PRIM_TEXTURE, 0, "84c36d64-89d8-c08a-5fbd-d4c59ae39674", <1,1,0>, <0,0,0>, PI] );
+            llSetLinkPrimitiveParamsFast(LINK_THIS,[PRIM_POSITION, llGetLocalPos() + <-speed,0,0>, PRIM_TEXTURE, 0, playerTexture, <1,1,0>, <0,0,0>, PI] );
         }
         if (button & CONTROL_ROT_LEFT)         
         {
-            llSetLinkPrimitiveParamsFast(LINK_THIS,[PRIM_POSITION, llGetLocalPos() + <0,speed,0>, PRIM_TEXTURE, 0, "84c36d64-89d8-c08a-5fbd-d4c59ae39674", <1,1,0>, <0,0,0>, -300 ]);
+            llSetLinkPrimitiveParamsFast(LINK_THIS,[PRIM_POSITION, llGetLocalPos() + <0,speed,0>, PRIM_TEXTURE, 0, playerTexture, <1,1,0>, <0,0,0>, -300 ]);
         }
         if (button & CONTROL_ROT_RIGHT)          
         {
-            llSetLinkPrimitiveParamsFast(LINK_THIS,[PRIM_POSITION, llGetLocalPos() + <0,-speed,0>, PRIM_TEXTURE, 0, "84c36d64-89d8-c08a-5fbd-d4c59ae39674", <1,1,0>, <0,0,0>, 300 ]);
+            llSetLinkPrimitiveParamsFast(LINK_THIS,[PRIM_POSITION, llGetLocalPos() + <0,-speed,0>, PRIM_TEXTURE, 0, playerTexture, <1,1,0>, <0,0,0>, 300 ]);
         }
         if (button & CONTROL_UP)          
         {
