@@ -23,6 +23,11 @@ default
         llSetText("Touch to activate ", <0,1,0>, 1);
     }
 
+    on_rez(integer param)
+    {
+        pos = llGetLocalPos();
+    }
+     
     touch_start(integer x)
     {
         llSetText(" ", <0,1,0>, 1);
