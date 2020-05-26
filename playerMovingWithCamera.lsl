@@ -19,7 +19,7 @@ default
     state_entry()
     {
         CameraLookingDown();     
-        pos = llGetLocalPos();
+        pos = llGetPos();
         llSetText("Touch to activate ", <0,1,0>, 1);
     }
 
