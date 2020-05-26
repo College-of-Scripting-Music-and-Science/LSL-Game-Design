@@ -25,7 +25,7 @@ default
 
     on_rez(integer param)
     {
-        pos = llGetLocalPos();
+        pos = llGetPos();
     }
      
     touch_start(integer x)
