@@ -1,6 +1,5 @@
 //All Rights Reserved Christopher Topalian Copyright 2020
 
-
 CameraLookingDown()
 {
     rotation sitRot = llEuler2Rot(<0, 0, 0> * DEG_TO_RAD);
@@ -19,6 +18,7 @@ default
 {
     state_entry()
     {
+        llSetTexture(playerTexture, 0);
         CameraLookingDown();     
         pos = llGetPos();
         llSetText("Touch to activate ", <0,1,0>, 1);
@@ -26,7 +26,8 @@ default
 
     on_rez(integer param)
     {
-        pos = llGetPos();
+        llSetTexture(playerTexture, 0);
+        pos = llGetPos(); 
     }
      
     touch_start(integer x)
