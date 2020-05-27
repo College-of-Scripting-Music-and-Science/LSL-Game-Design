@@ -1,6 +1,6 @@
 //All Rights Reserved Christopher Topalian Copyright 2020
 
-CameraLookingDown()
+CameraLookingForward()
 {
     rotation sitRot = llEuler2Rot(<0, 0, 0> * DEG_TO_RAD);
     llSitTarget(<0, 0, 0.2>, sitRot);
@@ -19,7 +19,7 @@ default
     state_entry()
     {
         llSetTexture(playerTexture, 4);
-        CameraLookingDown();     
+        CameraLookingForward();     
         pos = llGetPos();
         llSetText("Touch to activate ", <0,1,0>, 1);
     }
