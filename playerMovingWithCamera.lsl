@@ -1,5 +1,6 @@
 //All Rights Reserved Christopher Topalian Copyright 2020
 
+
 CameraLookingDown()
 {
     rotation sitRot = llEuler2Rot(<0, 0, 0> * DEG_TO_RAD);
